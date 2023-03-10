@@ -5,7 +5,7 @@ const WalletRouter = require('./WalletRouter')
 const UserRouter = require('./UserRouter')
 const AuthRouter = require('./AuthRouter')
 
-Router.use('/auth', AuthRouter)
+Router.use('/auth', AuthRouter, () => console.log('In AuthRouter!'))
 Router.use('/token', TokenRouter)
 Router.use('/location', LocationRouter)
 Router.use('/wallet', WalletRouter)
