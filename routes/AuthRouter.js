@@ -4,7 +4,7 @@ const middleware = require('../middleware')
 
 Router.post('/login', controller.Login)
 Router.post('/register', controller.Register, () => console.log('In post /register!'))
-Router.use('/register', controller.Register, () => console.log('In post /register!'))
+// Router.use('/register', controller.Register, () => console.log('In post /register!'))
 Router.put('/update/:user_id',
     middleware.stripToken,
     middleware.verifyToken,
