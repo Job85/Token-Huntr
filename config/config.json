@@ -12,7 +12,7 @@
   "production": {
     "database": "set DATABASE=$(grep DATABASE .env | cut -d '=' -f2)",
     "host": "set HOST=$(grep HOST .env | cut -d '=' -f2)",
-    "port": "set PORT=$(grep PORT .env | cut -d '=' -f2)",
+    "port": "5432",
     "username": "set USERNAME=$(grep USERNAME .env | cut -d '=' -f2)",
     "password": "set PASSWORD=$(grep PASSWORD .env | cut -d '=' -f2)",
     "internal database url": "set INTERNAL_DATABASE_URL=$(grep INTERNAL_DATABASE_URL .env | cut -d '=' -f2)",
