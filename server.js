@@ -3,7 +3,20 @@ const cors = require('cors')
 
 const app = express()
 
-const PORT = process.env.PORT || 3001
+// const PORT = process.env.PORT || 3001
+require('dotenv').config();
+const { Client } = require('pg')
+const client = new Client({
+    user: process.env.USERNAME,
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
+    port: process.env.PORT || 3001
+})
+client.connect(function (err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
 app.use(cors())
 app.use(express.json())
