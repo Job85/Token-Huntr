@@ -1,17 +1,22 @@
 {
   "development": {
     "database": "token_huntr_development",
-    "host": "0.0.0.0",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "database": "token_huntr_test",
-    "host": "0.0.0.0",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "token_huntr_production",
-    "host": "0.0.0.0",
+    "database": "set DATABASE=$(grep DATABASE .env | cut -d '=' -f2)",
+    "host": "set HOST=$(grep HOST .env | cut -d '=' -f2)",
+    "port": "set PORT=$(grep PORT .env | cut -d '=' -f2)",
+    "username": "set USERNAME=$(grep USERNAME .env | cut -d '=' -f2)",
+    "password": "set PASSWORD=$(grep PASSWORD .env | cut -d '=' -f2)",
+    "internal database url": "set INTERNAL_DATABASE_URL=$(grep INTERNAL_DATABASE_URL .env | cut -d '=' -f2)",
+    "postgres uri": "set POSTGRES_URI=$(grep POSTGRES_URI .env | cut -d '=' -f2)",
     "dialect": "postgres"
   }
 }
