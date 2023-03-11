@@ -10,13 +10,13 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "set DATABASE=$(grep DATABASE .env | cut -d '=' -f2)",
-    "host": "set HOST=$(grep HOST .env | cut -d '=' -f2)",
-    "port": "5432",
-    "username": "set USERNAME=$(grep USERNAME .env | cut -d '=' -f2)",
-    "password": "set PASSWORD=$(grep PASSWORD .env | cut -d '=' -f2)",
-    "internal database url": "set INTERNAL_DATABASE_URL=$(grep INTERNAL_DATABASE_URL .env | cut -d '=' -f2)",
-    "postgres uri": "set POSTGRES_URI=$(grep POSTGRES_URI .env | cut -d '=' -f2)",
+    "postgres uri": "cross-env POSTGRES_URI",
+    "host": "cross-env HOST",
+    "port": "cross-env PORT",
+    "database": "cross-env DATABASE",
+    "username": "cross-env USERNAME",
+    "password": "cross-env PASSWORD",
+    "internal database url": "cross-env INTERNAL_DATABASE_URL",
     "dialect": "postgres"
   }
 }
