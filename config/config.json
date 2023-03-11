@@ -10,13 +10,8 @@
     "dialect": "postgres"
   },
   "production": {
-    "postgres uri": "cross-env POSTGRES_URI",
-    "host": "cross-env HOST",
-    "port": "cross-env PORT",
-    "database": "cross-env DATABASE",
-    "username": "cross-env USERNAME",
-    "password": "cross-env PASSWORD",
-    "internal database url": "cross-env INTERNAL_DATABASE_URL",
+    "database": "token_huntr_production",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   }
 }
