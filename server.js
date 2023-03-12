@@ -16,4 +16,3 @@ const PORT = process.env.PORT || 3001
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
 
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))
-// test
